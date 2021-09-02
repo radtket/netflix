@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const ListToggle = () => {
   const [isToggled, setToggled] = useState(false);
   return (
-    <div
+    <button
       className="ListToggle"
       data-toggled={isToggled}
       onClick={() => {
@@ -11,12 +11,13 @@ const ListToggle = () => {
           return !prev;
         });
       }}
+      type="button"
     >
       <div>
         <i className="fa fa-fw fa-plus" />
         <i className="fa fa-fw fa-check" />
       </div>
-    </div>
+    </button>
   );
 };
 
